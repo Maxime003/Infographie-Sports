@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographie : Votre Programme Sportif Hybride</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f2f5;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .kpi-card {
+            background-color: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .kpi-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .kpi-icon {
+            font-size: 3rem;
+            line-height: 1;
+            color: #FF4E50;
+        }
+        .kpi-value {
+            font-size: 2.25rem;
+            font-weight: 900;
+            color: #FC913A;
+        }
+        .kpi-label {
+            font-size: 1rem;
+            color: #374151;
+            margin-top: 0.5rem;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #1f2937;
+        }
+        .card {
+            background-color: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .flowchart-step {
+            background-color: #E1F5C4;
+            color: #374151;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            font-weight: 700;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .flowchart-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #F9D423;
+            margin: 0.5rem 0;
+        }
+        .ai-button {
+            background-color: #F9D423;
+            color: #374151;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            cursor: pointer;
+            margin-top: 1.5rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .ai-button:hover {
+            background-color: #FC913A;
+            transform: translateY(-2px);
+        }
+        .ai-response {
+            background-color: #f8f8f8;
+            border-left: 4px solid #FC913A;
+            padding: 1rem;
+            margin-top: 1.5rem;
+            border-radius: 0.5rem;
+            color: #374151;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#FF4E50] via-[#FC913A] to-[#F9D423]">Le Programme de l'Athlète Hybride</h1>
+            <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">Une approche scientifique pour conquérir le marathon, la callisthénie et la musculation de manière synergique et sécuritaire.</p>
+        </header>
+
+        <section id="goals" class="mb-16">
+            <h2 class="section-title">Vos Trois Piliers de Performance</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="kpi-card">
+                    <div class="kpi-icon">🏃‍♂️</div>
+                    <div class="kpi-value">Marathon</div>
+                    <p class="kpi-label">Développer une endurance d'élite et franchir la ligne d'arrivée.</p>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon">🤸</div>
+                    <div class="kpi-value">Callisthénie</div>
+                    <p class="kpi-label">Maîtriser son poids de corps et réaliser des figures avancées.</p>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon">🏋️</div>
+                    <div class="kpi-value">Musculation</div>
+                    <p class="kpi-label">Forger un physique puissant, fort et esthétique.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="marathon" class="mb-16">
+            <h2 class="section-title">Pilier 1 : Objectif Marathon</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-10">La préparation d'un marathon est une science de la gestion du volume et de l'intensité. Pour un objectif de 4 heures, les données suggèrent une approche polarisée, où la majorité de l'effort est à basse intensité.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-4 text-center">Distribution de l'Intensité (Modèle Polarisé 80/20)</h3>
+                    <div class="chart-container h-64 sm:h-72">
+                        <canvas id="polarizedTrainingChart"></canvas>
+                    </div>
+                     <p class="mt-4 text-sm text-gray-600 text-center">La clé du succès en endurance : passer 80% du temps en efforts de faible intensité pour construire une base aérobie solide, et 20% en haute intensité pour booster le VO2 max.</p>
+                     <button id="generateMarathonSession" class="ai-button">✨ Générer ma séance ✨</button>
+                     <div id="marathonResponse" class="ai-response hidden mt-4"></div>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-4 text-center">Paramètres Clés pour un Débutant (Objectif 4h)</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center"><span class="text-2xl mr-4">⏱️</span><div><span class="font-bold">17 Semaines</span> de préparation en moyenne.</div></li>
+                        <li class="flex items-center"><span class="text-2xl mr-4">📏</span><div><span class="font-bold">40-50 km/semaine</span> en volume moyen.</div></li>
+                        <li class="flex items-center"><span class="text-2xl mr-4">📈</span><div><span class="font-bold">Max 32 km</span> pour la plus longue sortie.</div></li>
+                         <li class="flex items-center"><span class="text-2xl mr-4">⚡</span><div><span class="font-bold">2-3 séances/semaine</span> de fractionné pour le VO2 max.</div></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="calisthenics" class="mb-16">
+            <h2 class="section-title">Pilier 2 : Maîtrise de la Callisthénie</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-10">La callisthénie repose sur le principe de surcharge progressive adapté au poids du corps. La progression ne vient pas de l'ajout de poids, mais de l'ajustement de la biomécanique pour rendre les exercices plus difficiles.</p>
+            <div class="card md:col-span-2">
+                <h3 class="text-xl font-bold mb-6 text-center">Les Levier de la Surcharge Progressive</h3>
+                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 items-start">
+                    <div class="flowchart-step">1. Augmenter Répétitions/Séries</div>
+                    <div class="flowchart-arrow hidden lg:flex">→</div>
+                    <div class="flowchart-step">2. Variantes d'Exercice Plus Difficiles</div>
+                     <div class="flowchart-arrow hidden lg:flex">→</div>
+                    <div class="flowchart-step">3. Jouer sur le Tempo (Excentrique, Isométrie)</div>
+                     <div class="flowchart-arrow hidden lg:flex">→</div>
+                    <div class="flowchart-step">4. Ajouter du Poids (Gilet Lesté)</div>
+                </div>
+                <p class="mt-6 text-sm text-gray-600 text-center">Chaque étape est un nouveau stimulus. La maîtrise technique parfaite d'une étape est le prérequis pour passer à la suivante et garantir une progression sécuritaire.</p>
+                <button id="generateCalisthenicsProgression" class="ai-button">✨ Prochaine Étape Callisthénie ✨</button>
+                <div id="calisthenicsResponse" class="ai-response hidden mt-4"></div>
+            </div>
+        </section>
+        
+        <section id="bodybuilding" class="mb-16">
+            <h2 class="section-title">Pilier 3 : Musculation Intelligente</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-10">"Faire de la musculation" est un terme trop vague. Les adaptations recherchées (volume ou force) dépendent de paramètres très spécifiques. Le programme doit distinguer clairement ces deux objectifs.</p>
+            <div class="card">
+                <h3 class="text-xl font-bold mb-4 text-center">Hypertrophie vs. Force Maximale : Deux Mondes, Un Outil</h3>
+                <div class="chart-container h-80 sm:h-96">
+                    <canvas id="strengthVsHypertrophyChart"></canvas>
+                </div>
+                <p class="mt-4 text-sm text-gray-600 text-center">Pour la taille (Hypertrophie), visez un volume plus élevé avec des repos courts. Pour la force pure, privilégiez l'intensité maximale avec des repos longs pour une récupération nerveuse complète.</p>
+            </div>
+        </section>
+
+        <section id="concurrent" class="mb-16">
+            <h2 class="section-title">Le Défi de l'Intégration : Gérer les Interférences</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-10">L'entraînement concomitant (force + endurance) crée un conflit physiologique. L'activer la voie de l'endurance (AMPK) peut inhiber celle de l'hypertrophie (mTOR). Une planification intelligente est essentielle.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-4 text-center">Stratégie n°1 : L'Ordre des Séances</h3>
+                    <div class="flex flex-col items-center justify-center h-full">
+                        <div class="flowchart-step bg-[#FC913A] text-white">🏋️ Musculation</div>
+                        <div class="text-4xl font-bold my-2 text-[#F9D423]">&gt;</div>
+                        <div class="flowchart-step bg-[#FF4E50] text-white">🏃‍♂️ Endurance</div>
+                        <p class="mt-4 text-sm text-gray-600 text-center">Priorisez la force pour activer la voie mTOR sans interférence immédiate.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-4 text-center">Stratégie n°2 : Le Temps de Récupération</h3>
+                     <div class="flex flex-col items-center justify-center h-full">
+                        <div class="text-5xl font-black text-[#FF4E50]">6h</div>
+                        <div class="text-lg font-bold text-gray-700">Minimum Absolu</div>
+                        <p class="text-sm text-gray-500 mb-4">entre les séances de force et d'endurance</p>
+                        <div class="text-5xl font-black text-[#FC913A]">24h</div>
+                        <div class="text-lg font-bold text-gray-700">Idéal</div>
+                        <p class="text-sm text-gray-500">pour une récupération optimale</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="prevention" class="mb-16">
+             <h2 class="section-title">Le Gardien : Prévention des Blessures</h2>
+             <p class="text-center text-gray-600 max-w-2xl mx-auto mb-10">La meilleure performance est celle qui dure. Le suivi de la charge et de la récupération n'est pas une option, c'est une nécessité pour éviter le surentraînement et les blessures.</p>
+             <div class="card">
+                <h3 class="text-xl font-bold mb-4 text-center">Le Ratio Charge Aiguë/Chronique (ACWR)</h3>
+                 <div class="chart-container h-72 sm:h-80">
+                    <canvas id="acwrChart"></canvas>
+                </div>
+                <p class="mt-4 text-sm text-gray-600 text-center">Ce ratio compare votre charge de la semaine actuelle à la moyenne des 4 dernières. Maintenez-le dans la "sweet spot" (0.8-1.3) pour progresser en toute sécurité. Un pic au-dessus de 1.5 double votre risque de blessure.</p>
+             </div>
+        </section>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                    return label.join(' ');
+                } else {
+                    return label;
+                }
+            };
+            
+            const wrapLabel = (label, maxLength) => {
+                if (label.length <= maxLength) {
+                    return label;
+                }
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = '';
+                words.forEach(word => {
+                    if ((currentLine + word).length > maxLength) {
+                        lines.push(currentLine.trim());
+                        currentLine = '';
+                    }
+                    currentLine += word + ' ';
+                });
+                lines.push(currentLine.trim());
+                return lines;
+            };
+
+            const colors = {
+                red: '#FF4E50',
+                orange: '#FC913A',
+                yellow: '#F9D423',
+                lightGreen: '#EDE574',
+                lighterGreen: '#E1F5C4',
+                gray: '#6b7280'
+            };
+
+            const polarizedCtx = document.getElementById('polarizedTrainingChart');
+            if(polarizedCtx) {
+                new Chart(polarizedCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Basse Intensité (Zone 1)', 'Haute Intensité (Zone 3)'],
+                        datasets: [{
+                            data: [80, 20],
+                            backgroundColor: [colors.lighterGreen, colors.red],
+                            borderColor: ['#ffffff'],
+                            borderWidth: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    title: tooltipTitleCallback
+                                }
+                            }
+                        },
+                        cutout: '70%'
+                    }
+                });
+            }
+
+            const strengthVsHypertrophyCtx = document.getElementById('strengthVsHypertrophyChart');
+            if(strengthVsHypertrophyCtx) {
+                new Chart(strengthVsHypertrophyCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Répétitions', 'Repos (min)'],
+                        datasets: [
+                            {
+                                label: 'Hypertrophie (Volume)',
+                                data: [10, 1.5],
+                                backgroundColor: colors.orange,
+                                borderColor: colors.orange,
+                                borderWidth: 1,
+                                barPercentage: 0.6
+                            },
+                            {
+                                label: 'Force Maximale',
+                                data: [3, 4],
+                                backgroundColor: colors.red,
+                                borderColor: colors.red,
+                                borderWidth: 1,
+                                barPercentage: 0.6
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Valeur'
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                position: 'top',
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    title: tooltipTitleCallback
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            const acwrCtx = document.getElementById('acwrChart');
+            if(acwrCtx) {
+                new Chart(acwrCtx, {
+                    type: 'line',
+                    data: {
+                        labels: ['0.5', '0.8', '1.0', '1.3', '1.5', '1.8', '2.0'],
+                        datasets: [{
+                            label: 'Risque de Blessure',
+                            data: [10, 5, 5, 5, 20, 45, 60],
+                            borderColor: colors.red,
+                            backgroundColor: 'rgba(255, 78, 80, 0.1)',
+                            fill: true,
+                            tension: 0.4,
+                            pointBackgroundColor: colors.red,
+                            pointRadius: 5
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Risque Relatif de Blessure (%)'
+                                }
+                            },
+                            x: {
+                                title: {
+                                    display: true,
+                                    text: 'Ratio Charge Aiguë/Chronique'
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                display: false
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    title: tooltipTitleCallback
+                                }
+                            }
+                        },
+                        annotation: {
+                            annotations: {
+                                box1: {
+                                    type: 'box',
+                                    xMin: 0.8,
+                                    xMax: 1.3,
+                                    backgroundColor: 'rgba(225, 245, 196, 0.4)',
+                                    borderColor: 'rgba(173, 216, 230, 0)',
+                                    label: {
+                                        content: "Sweet Spot",
+                                        enabled: true,
+                                        position: "start"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            async function callGeminiAPI(prompt, responseElementId) {
+                const responseElement = document.getElementById(responseElementId);
+                responseElement.classList.remove('hidden');
+                responseElement.innerHTML = 'Génération en cours... <span class="animate-pulse">⏳</span>';
+
+                try {
+                    let chatHistory = [];
+                    chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+                    const payload = { contents: chatHistory };
+                    const apiKey = "";
+                    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    const result = await response.json();
+                    if (result.candidates && result.candidates.length > 0 &&
+                        result.candidates[0].content && result.candidates[0].content.parts &&
+                        result.candidates[0].content.parts.length > 0) {
+                        const text = result.candidates[0].content.parts[0].text;
+                        responseElement.innerHTML = text;
+                    } else {
+                        responseElement.innerHTML = 'Erreur: Impossible de générer une réponse. Veuillez réessayer.';
+                    }
+                } catch (error) {
+                    console.error('Error calling Gemini API:', error);
+                    responseElement.innerHTML = 'Erreur lors de la communication avec l\'IA. Veuillez vérifier votre connexion.';
+                }
+            }
+
+            document.getElementById('generateMarathonSession')?.addEventListener('click', () => {
+                const prompt = "Based on the principles of 80/20 polarized training for marathon preparation, suggest a single training session for a runner aiming for a 4-hour marathon. Focus on either a low-intensity long run, a tempo run, or an interval session. Provide duration, intensity, and a brief justification. Assume today is a training day.";
+                callGeminiAPI(prompt, 'marathonResponse');
+            });
+
+            document.getElementById('generateCalisthenicsProgression')?.addEventListener('click', () => {
+                const prompt = "Considering the principles of progressive overload in calisthenics (increasing reps/sets, harder variations, tempo control, adding weight), if a beginner can currently perform 5 strict pull-ups, what is the *next specific progression* they should aim for? Describe the exercise and why it's the next logical step.";
+                callGeminiAPI(prompt, 'calisthenicsResponse');
+            });
+        });
+    </script>
+</body>
+</html>
