@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votre Programme Sportif Hybride sur 4 Semaines</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f1eb;
+            color: #4a4a4a;
+        }
+        .container {
+            max-width: 1000px;
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 10px 20px rgba(0, 0, 0, 0.05);
+            height: 100%;
+        }
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 900;
+            color: #333;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .section-subtitle {
+            text-align: center;
+            max-width: 3xl;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 3rem;
+            color: #6b7280;
+        }
+        .day-card {
+            background-color: #fcfaf6;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+        }
+        .day-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #008080;
+            margin-bottom: 1rem;
+        }
+        .exercise-list li {
+            margin-bottom: 0.75rem;
+        }
+        .exercise-list li strong {
+            color: #333;
+        }
+        .note {
+            background-color: #f0a58a20;
+            border-left: 4px solid #f0a58a;
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            margin-top: 1.5rem;
+            color: #b24a28;
+            font-size: 0.9rem;
+        }
+        .superset-label {
+            font-weight: bold;
+            color: #008080;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container mx-auto p-4 md:p-8 py-12">
+
+        <section class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-black text-teal-800 mb-4">Votre Programme Sportif Hybride</h1>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">Un plan détaillé sur 4 semaines pour progresser en marathon, callisthénie et musculation, optimisé pour 1 heure par séance et la sécurité de vos genoux.</p>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="section-title text-teal-700">Vue d'Ensemble Hebdomadaire</h2>
+            <p class="section-subtitle">Voici la répartition des séances sur la semaine, conçue pour un équilibre optimal de vos objectifs.</p>
+            <div class="card p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-center">
+                <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-800">Lundi</h3>
+                    <p class="text-gray-600">Musculation Haut du Corps + Callisthénie Drills (Handstand / Muscle-Up)</p>
+                </div>
+                <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-800">Mardi</h3>
+                    <p class="text-gray-600">Course à Pied (Endurance Fondamentale)</p>
+                </div>
+                <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-800">Mercredi</h3>
+                    <p class="text-gray-600">Musculation Bas du Corps & Core + Gainage Callisthénie</p>
+                </div>
+                <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-800">Jeudi</h3>
+                    <p class="text-gray-600">Callisthénie (Force Spécifique) + Musculation (Rappel Dos/Biceps)</p>
+                </div>
+                <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-800">Vendredi</h3>
+                    <p class="text-gray-600">Course à Pied (Volume Modéré / Qualité Très Légère)</p>
+                </div>
+                <div class="p-4 bg-gray-50 rounded-lg shadow-sm col-span-1 md:col-span-2 lg:col-span-1">
+                    <h3 class="text-xl font-semibold text-gray-800">Weekend</h3>
+                    <p class="text-gray-600">Repos Actif / Sport Libre / Course Facile Optionnelle</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="section-title text-teal-700">Contenu Détaillé des Séances (Semaines 1-4)</h2>
+            <p class="section-subtitle">Chaque séance est conçue pour tenir en 60 minutes, échauffement et retour au calme inclus. Soyez efficace !</p>
+
+            <div class="grid grid-cols-1 gap-8">
+                <!-- Lundi -->
+                <div class="day-card">
+                    <h3 class="day-title">Lundi : Musculation Haut du Corps (Force/Esthétique) + Drills Callisthénie</h3>
+                    <ul class="exercise-list list-disc pl-5">
+                        <li><strong>Échauffement (8 min) :</strong> Mobilisation articulaire générale (épaules, coudes, poignets), quelques pompes légères (5-10), suspensions actives à la barre (2x10s).</li>
+                        <li><strong>Travail Spécifique Callisthénie (12 min) :</strong> Choisir **UN** objectif pour la séance et travailler ses progressions.
+                            <ul class="list-disc pl-5 mt-2">
+                                <li>**Option Handstand :** Maintenez Handstand contre un mur (face au mur) : 3 séries de 30-45 secondes. Focus sur l'alignement.</li>
+                                <li>**Option Muscle-Up :** Tractions Prise Fausse (False Grip Pull-ups - si possible) : 3 séries de 4-6 répétitions. Concentrez-vous sur l'explosivité.</li>
+                            </ul>
+                        </li>
+                        <li><strong><span class="superset-label">Superset 1 (Pectoraux / Épaules Latérales)</span> - 3 tours :</strong> Repos 60-90s entre les tours.
+                            <ul class="list-disc pl-5 mt-2">
+                                <li><strong>A1.</strong> Développé Couché Incliné Haltères : 6-8 répétitions (Charge : 20-22kg/haltère en Semaine 1, augmentez si possible).</li>
+                                <li><strong>A2.</strong> Élévations Latérales Haltères : 10-12 répétitions (Charge : 10-12kg/haltère en Semaine 1, priorisez la forme).</li>
+                            </ul>
+                        </li>
+                        <li><strong><span class="superset-label">Superset 2 (Pectoraux / Triceps)</span> - 3 tours :</strong> Repos 60s entre les tours.
+                            <ul class="list-disc pl-5 mt-2">
+                                <li><strong>B1.</strong> Pompes au sol (ou surélevées) : Max répétitions (viser 15-20), contrôlées.</li>
+                                <li><strong>B2.</strong> Extension Triceps Poulie Haute (à la corde) : 12-15 répétitions.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Retour au Calme (5 min) :</strong> Étirement léger des pectoraux et triceps.</li>
+                    </ul>
+                    <div class="note">**Note :** Le travail callisthénie en début de séance profite de votre énergie. Si le Handstand est trop dur, commencez par des tenues en L-Sit ou frog stand.</div>
+                </div>
+
+                <!-- Mardi -->
+                <div class="day-card">
+                    <h3 class="day-title">Mardi : Course à Pied (Endurance Fondamentale)</h3>
+                    <ul class="exercise-list list-disc pl-5">
+                        <li><strong>Échauffement (5 min) :</strong> Marche rapide, puis jogging très lent. Mobilisations douces des chevilles et genoux.</li>
+                        <li><strong>Course à Pied (50 min) :</strong>
+                            <ul class="list-disc pl-5 mt-2">
+                                <li>**Semaine 1 :** 45 minutes de course à allure très facile (Zone 2, conversation facile).</li>
+                                <li>**Semaine 2 :** 48 minutes de course à allure très facile.</li>
+                                <li>**Semaine 3 :** 50 minutes de course à allure très facile.</li>
+                                <li>**Semaine 4 (Deload) :** 30-35 minutes de course très facile.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Retour au Calme (5 min) :</strong> Marche lente, étirements légers des quadriceps, ischio-jambiers, mollets.</li>
+                    </ul>
+                    <div class="note">**Note :** La clé est la patience. Ne pas forcer l'allure. Concentrez-vous sur le volume et la consistance pour protéger vos genoux.</div>
+                </div>
+
+                <!-- Mercredi -->
+                <div class="day-card">
+                    <h3 class="day-title">Mercredi : Musculation Bas du Corps & Core + Gainage Callisthénie</h3>
+                    <ul class="exercise-list list-disc pl-5">
+                        <li><strong>Échauffement (8 min) :</strong> Rotations des hanches, cercles de genoux, quelques fentes avant sans poids.</li>
+                        <li><strong>Circuit Jambes & Fessiers (35 min) - 3 tours :</strong> Repos 90s après chaque tour complet.
+                            <ul class="list-disc pl-5 mt-2">
+                                <li><strong>A1.</strong> Goblet Squat (avec haltère ou kettlebell) : 10-15 répétitions. **Priorité à la technique.**</li>
+                                <li><strong>A2.</strong> Soulevé de Terre Roumain (RDL) Haltères Légers : 10-12 répétitions. **Commencez TRÈS léger (5-8kg/haltère)**. Focus sur la charnière de hanche.</li>
+                                <li><strong>A3.</strong> Fentes Bulgares (pied arrière surélevé, sans poids ou haltères légers) : 8-10 répétitions par jambe. Si instable, faites des fentes classiques.</li>
+                                <li><strong>A4.</strong> Mollets debout (avec ou sans poids) : 15-20 répétitions.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Circuit Core (12 min) - 2 tours :</strong> Repos 45s après chaque tour complet.
+                            <ul class="list-disc pl-5 mt-2">
+                                <li><strong>B1.</strong> Planche avant (Plank) : 45-60 secondes.</li>
+                                <li><strong>B2.</strong> Hollow Body Hold (gainage ventrale callisthénie) : 20-30 secondes.</li>
+                                <li><strong>B3.</strong> Planche latérale : 30-45 secondes par côté.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Retour au Calme (5 min) :</strong> Étirements des quadriceps, ischio-jambiers, fessiers, mollets.</li>
+                    </ul>
+                    <div class="note">**Note :** La technique pour les jambes est non négociable. Si une douleur apparaît, arrêtez et revoyez votre forme ou réduisez la charge.</div>
+                </div>
+
+                <!-- Jeudi -->
+                <div class="day-card">
+                    <h3 class="day-title">Jeudi : Callisthénie (Force Spécifique & Technique) + Musculation (Rappel Dos/Biceps)</h3>
+                    <ul class="exercise-list list-disc pl-5">
+                        <li><strong>Échauffement (8 min) :</strong> Mobilisation articulaire générale, rotations scapulaires, tirages légers sur machine ou élastique. Suspensions actives.</li>
+                        <li><strong>Travail Spécifique Callisthénie (17 min) :</strong> Choisir **UN** objectif pour la séance et travailler ses progressions.
+                            <ul class="list-disc pl-5 mt-2">
+                                <li>**Option Handstand :** Handstand Shoulder Taps (contre le mur) : 3 séries de 5-8 taps par bras. Transition Frog Stand vers Handstand (aide murale si besoin) : 3 séries de 5-8 répétitions.</li>
+                                <li>**Option Muscle-Up :** Traction Explosive Poitrine (Chest-to-bar Pull-ups) : 3 séries de 3-5 répétitions. Dips sur Anneaux/Barres Lestés (si facile au poids du corps) : 3 séries de 6-10 répétitions.</li>
+                            </ul>
+                        </li>
+                        <li><strong><span class="superset-label">Superset 1 (Dos / Biceps)</span> - 3-4 tours :</strong> Repos 60-90s entre les tours.
+                            <ul class="list-disc pl-5 mt-2">
+                                <li><strong>A1.</strong> Tirage Vertical (Lat Pulldown) : 8-12 répétitions (Charge : 52kg x 8 reps, essayez de progresser ou faire plus de reps).</li>
+                                <li><strong>A2.</strong> Curls Biceps Haltères : 10-15 répétitions.</li>
+                            </ul>
+                        </li>
+                        <li><strong><span class="superset-label">Superset 2 (Dos / Épaules Arrière)</span> - 3 tours :</strong> Repos 60s entre les tours.
+                            <ul class="list-disc pl-5 mt-2">
+                                <li><strong>B1.</strong> Rowing Horizontal (Machine ou Tirage Horizontal Poulie Basse) : 10-15 répétitions.</li>
+                                <li><strong>B2.</strong> Face Pulls (Poulie Haute à la corde) : 15-20 répétitions.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Retour au Calme (5 min) :</strong> Étirement du dos, biceps, épaules.</li>
+                    </ul>
+                    <div class="note">**Note :** La qualité des répétitions est primordiale pour la callisthénie. Mieux vaut moins de répétitions propres que beaucoup de répétitions mal exécutées.</div>
+                </div>
+
+                <!-- Vendredi -->
+                <div class="day-card">
+                    <h3 class="day-title">Vendredi : Course à Pied (Volume Modéré / Qualité Très Légère)</h3>
+                    <ul class="exercise-list list-disc pl-5">
+                        <li><strong>Échauffement (5 min) :</strong> Marche rapide, jogging très lent. Quelques éducatifs de course très légers (talons-fesses, montées de genoux sur place).</li>
+                        <li><strong>Course à Pied (50 min) :</strong>
+                            <ul class="list-disc pl-5 mt-2">
+                                <li>**Semaine 1-2 :** 50 minutes de course à allure facile constante.</li>
+                                <li>**Semaine 3 :** 40 minutes de course facile, suivies de 3 x (1 minute rapide contrôlée / 2 minutes faciles). Terminez par 5 minutes faciles.</li>
+                                <li>**Semaine 4 (Deload) :** 30 minutes de course très facile.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Retour au Calme (5 min) :</strong> Marche lente, étirements prolongés des jambes, en insistant sur les zones de tension habituelles.</li>
+                    </ul>
+                    <div class="note">**Note :** Le "rapide" du Vendredi ne doit PAS être un sprint. C'est une allure plus vive mais tenable, pour stimuler le système sans risque. Continuez de privilégier vos genoux.</div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="mt-12 mb-8">
+            <h2 class="section-title text-teal-700">Principes Clés de Progression (Après les 4 Premières Semaines)</h2>
+            <div class="card p-6">
+                <ul class="list-disc pl-5 space-y-4 text-gray-700">
+                    <li>**Tenir un Journal :** Notez vos performances (poids, reps, temps, distance, RPE) pour chaque séance. C'est indispensable pour savoir quand et comment augmenter la charge.</li>
+                    <li>**Règle des 10-15% (Course) :** N'augmentez pas le volume total de course de plus de 10-15% par semaine après la phase de base.</li>
+                    <li>**Augmentation de Charge (Musculation) :** Quand vous atteignez le haut de la fourchette de répétitions avec une forme parfaite, augmentez le poids le plus petit possible. Si vous ne pouvez pas augmenter le poids, faites plus de répétitions ou de séries.</li>
+                    <li>**Progression Callisthénie :** Une fois une variante maîtrisée (forme impeccable, reps solides), passez à la progression suivante sur votre chemin vers le Handstand et le Muscle-Up (comme vu précédemment).</li>
+                    <li>**Semaines de Décharge (Deload) :**
+                        <ul class="list-disc pl-5 mt-2">
+                            <li>**Quand :** Toutes les 4 à 6 semaines, ou dès que vous ressentez une fatigue accumulée, des douleurs persistantes, une baisse de motivation ou de performance.</li>
+                            <li>**Comment :** Réduisez le volume de 30-50% (ex: 2 séries au lieu de 3, ou moins de reps) en gardant les mêmes charges. La course sera très facile et plus courte. Cela permet à votre corps de récupérer et de se renforcer.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="mt-12">
+            <h2 class="section-title text-teal-700">Rappels Importants pour une Progression Durable</h2>
+            <div class="card p-6">
+                <ul class="list-disc pl-5 space-y-4 text-gray-700">
+                    <li>**Écoutez Votre Corps :** C'est le conseil le plus important. La fatigue, la douleur (surtout aux genoux) sont des signaux. Ne les ignorez jamais.</li>
+                    <li>**Nutrition & Hydratation :** Continuez à vous assurer un apport suffisant en protéines, glucides, lipides et une bonne hydratation. C'est le carburant et le matériel de construction.</li>
+                    <li>**Sommeil :** Visez idéalement 7-8 heures de sommeil. C'est là que la magie de l'adaptation opère.</li>
+                    <li>**Patience & Consistance :** Les résultats viennent avec la régularité et la persévérance, pas avec des entraînements occasionnels extrêmes. Soyez patient avec vos progrès, surtout pour le marathon et les figures de callisthénie.</li>
+                    <li>**Amusez-vous :** Gardez le plaisir de l'effort et du mouvement.</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="text-center p-8 border-t border-gray-200 bg-white">
+        <p class="text-gray-600">Ce programme est un guide. Votre progression est unique.</p>
+    </footer>
+
+</body>
+</html>
